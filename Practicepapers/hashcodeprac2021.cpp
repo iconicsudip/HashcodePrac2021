@@ -12,6 +12,7 @@ int main()
     for (int i = 0; i < 3; i++){
         cin >> teamarr[i];
     }
+    int total_team[3]={2,3,4};
 
     /*Total members in three team*/
     int totaltwomem = teamarr[0] * 2;   //2
@@ -35,6 +36,7 @@ int main()
         }
         
     }
+
     /* For checking i just run these loops*/
     for(int j=0;j<number_of_pizzas;j++){
         cout<<ingrediants_size[j]<<" ";
@@ -43,5 +45,14 @@ int main()
     for(int j = 0;j<first;j++){
         cout<<table[j]<<" ";
     }
+    /*Output*/
+    //2 3 4           5
+    //teamlen      teammems
+    // |             |
+    //(2)2(1) + (3)6(2) = 8 = 2/1 + 6/2 = 5 - 5 = -1
+    //(2)2(1) + (4)4(1) = 6 = 2/1 + 4/1 = 6 - 5 = 1
+    //(3)6(2) + (4)4(1) = 10 = 6/2 + 4/1 = 7 - 5 = 2
+    //(2)2(1) + (3)6(2) + (4)4(1) = 12 = 2/1 + 6/2 + 4/1 = 9 - 5 = 4
+    
     return 0;
 }
